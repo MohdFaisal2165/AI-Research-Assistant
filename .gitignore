@@ -1,0 +1,25 @@
+# Environments and Secrets
+.env
+.venv_311/
+env/
+
+# Vector Database (Local Data)
+db/
+!db/.gitkeep
+
+# Raw papers / large local research files
+data/raw_papers/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node Modules / frontend build
+frontend/node_modules/
+frontend/dist/
+
+# OS generated files
+.DS_Store
+Thumbs.db

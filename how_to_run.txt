@@ -1,0 +1,53 @@
+# How to Run the Haptic RAG System
+
+This guide outlines the necessary steps to set up and run both the frontend and backend of the application locally.
+
+## 1. Prerequisites
+- **Python 3.8+** installed.
+- **Node.js** (and npm) installed.
+- **Ollama** installed locally (for the Llama 3.2 model).
+Run ollama run llama3.2
+- A `.env` file in the root directory containing your API keys:
+  - `OPENAI_API_KEY=your_key`
+  - `ANTHROPIC_API_KEY=your_key`
+  - `GEMINI_API_KEY=your_key`
+
+---
+
+## 2. Running the Backend (FastAPI + AI Models)
+
+Open a new terminal at the root of the project:
+
+1. **(Recommended)** Create and activate a Python virtual environment:
+   Windows: `python -m venv .venv` then `.venv\Scripts\activate`
+   Mac/Linux: `python3 -m venv .venv` then `source .venv/bin/activate`
+
+2. **Install dependencies:**
+   `pip install -r requirements.txt`
+
+3. **Start Ollama Locally (in a separate background terminal):**
+   `ollama run llama3.2`
+
+4. **Run the backend server:**
+   Navigate into the `backend` folder and run the script:
+   `cd backend`
+   `python api.py`
+   
+   The API will now be running on `http://localhost:8000`.cd backend
+
+---
+
+## 3. Running the Frontend (React + Vite)
+
+Open a second terminal at the root of the project:
+
+1. **Navigate to the frontend directory:**
+   `cd frontend`
+
+2. **Install node modules:**
+   `npm install`
+
+3. **Start the development server:**
+   `npm run dev`
+
+   The frontend will start up and provide you with a localhost URL (usually `http://localhost:5173`). Open that URL in your browser to interact with the Haptic RAG System.
